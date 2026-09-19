@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Nagvanshi_Hospital</display-name>
+  
+ 	<listener>
+ 	
+ 	
+ 	
+ 		<listener-class>com.app.DatabaseConnection</listener-class>
+ 	
+ 	
+ 	</listener>
+ 	
+<!-- ✅ Servlet define -->
+  <servlet>
+      <servlet-name>SendOTP</servlet-name>
+      <servlet-class>com.app.SendOTP</servlet-class>
+  </servlet>
+
+  
+ 	
+
+ 	
+ 	
+ 
+  <welcome-file-list>
+    <welcome-file>HomePage.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

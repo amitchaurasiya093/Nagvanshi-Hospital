@@ -1,0 +1,703 @@
+@charset "UTF-8";
+
+                                                           /* HOME PAGE CSS START HERE */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	
+}
+
+
+.home-table-one {
+	width: 100%;
+	background-color: #077fa5;
+}
+
+.Hover:hover{
+
+    background-color:red;
+    font-size:18px;
+    border-radius:10px;
+}
+
+.home-table-two {
+	background-color: #add8e6;
+}
+
+.container-div {
+	background-color: #077fa5;
+	padding: 10px;
+	padding-bottom: 25px;
+}
+
+.div-2 {
+	background-color: #FFFFFF;
+	border-radius: 10px;
+}
+
+.heading {
+
+	color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+
+ .announcement-scroll {
+      display: flex;
+      flex-direction: column;
+      animation: scrollUp 20s linear infinite;
+    }
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    .notice-item {
+      min-height: auto;
+    }
+
+    .announcement-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+      height: 87px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .image{
+    
+        border-left:8px solid brown;
+        border-bottom:4px solid brown;
+      
+        border-right:8px solid yellow;
+        border-top:4px solid yellow;
+    }
+    
+.modal-content {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border: 5px solid transparent;
+  background-clip: padding-box;
+  animation: glowBorder 2s ease-in-out infinite alternate;
+}
+
+/* Animated Glowing Border */
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b, #ff6f61, #ffc371);
+  background-size: 400% 400%;
+  border-radius: 20px;
+  z-index: -1;
+  animation: glowEffect 4s ease-in-out infinite;
+}
+
+/* Glow effect for the border */
+@keyframes glowEffect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation for the modal body text */
+@keyframes glowBorder {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.9);
+  }
+}
+
+/* Title styling */
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d63384;
+  text-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+}
+
+/* Modal body text */
+.modal-body h4 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #d63384;
+}
+
+.modal-body p {
+  font-size: 1.2rem;
+  color: #6a1b9a;
+}
+
+
+    
+    
+    
+                                                  /* HOME PAGE CSS END HERE */
+                                                  
+                                                  
+                                                  /* BOOK APPOINTMENT CSS START HERE */
+
+
+
+
+.appointment-form {
+    
+     background-color: #add8e6;
+     border-radius: 20px;
+     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+     padding: 30px;
+     margin-top: 30px;
+     animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    
+     from { opacity: 0; transform: translateY(20px); }
+     to { opacity: 1; transform: translateY(0); }
+}
+
+.appointment-form input,
+.appointment-form textarea,
+.appointment-form select {
+   
+     border-radius: 10px !important;
+     transition: 0.3s ease-in-out;
+}
+
+.appointment-form input:focus,
+.appointment-form textarea:focus,
+.appointment-form select:focus {
+    
+     box-shadow: 0 0 10px #077fa5;
+     border: 1px solid #077fa5;
+}
+
+.appointment-form button {
+     
+     font-size: 18px;
+     background-color: green;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     padding: 10px 25px;
+     transition: all 0.3s ease-in-out;
+}
+
+.appointment-form button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05);
+}
+
+/* Custom Animated Colorful Calendar */
+.ui-datepicker {
+    background: linear-gradient(to right, #077fa5, #7fd8d8);
+    border: 2px solid #005f73;
+    border-radius: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    padding: 10px;
+    animation: zoomIn 0.3s ease-in-out;
+}
+.ui-datepicker td a {
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+.ui-datepicker td a:hover {
+    background-color: #ffcb05;
+    color: #000;
+    transform: scale(1.1);
+}
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#datepicker {
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#datepicker:focus {
+    box-shadow: 0 0 10px #077fa5;
+    border: 1px solid #077fa5;
+}
+
+                                                       /* BOOK APPOINTMENT CSS END HERE */
+                                                       
+                                                       /* DOCTOR DETAILS PAGE CSS START HERE */
+                                                       
+                                                       
+ .banner-btn{
+ 
+     font-size:22px;
+     font-family:verdana;
+     font-weight:bold;
+     background-color:red;
+     border:none;
+     padding-block:10px;
+     margin-block:5px;
+     border-radius:5px;
+     
+ }
+ 
+ .Hover:hover{
+
+    background-color:red;
+    font-size:18px;
+    border-radius:10px;
+}
+
+.heading{
+
+    font-size:22px;
+}
+
+    .one {
+      position: relative;
+      overflow: hidden;
+      height: 150px; /* Optional: Adjust according to image height */
+    }
+
+    .Ambulance-image {
+      position: absolute;
+      top: 10px; /* adjust vertical position */
+      right: -200px; /* Start from outside the right */
+      animation: moveAmbulance 10s linear infinite;
+    }
+
+    @keyframes moveAmbulance {
+      0% {
+        right: -200px; /* Start off-screen from the right */
+      }
+      100% {
+        right: 100%; /* Move completely to the left */
+      }
+    }
+  
+                                                    /* DOCTOR DETAILS PAGE CSS END HERE */
+                                                    
+                                                    /* CONTACT PAGE CSS START HERE */
+                                                    
+     .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .form-header {
+      background-color: #007bff;
+      padding: 15px;
+      border-radius: 15px 15px 0 0;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    label {
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    input.form-control, textarea.form-control {
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    input.form-control:focus, textarea.form-control:focus {
+      box-shadow: 0 0 5px rgba(0,123,255,0.5);
+      border-color: #007bff;
+    }
+
+    .submit-btn {
+      background-color: green;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .submit-btn:hover {
+      background-color: darkgreen;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .logo-img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .form-footer {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+                                                       /* CONTACT PAGE CSS END HERE */
+                                                       
+                                                       /* ADMIN DOCTOR LIST PAGE CSS START HERE */
+                                                       
+                                                       
+   .home-table-two {
+	
+	background-color: #add8e6;
+}
+         
+.container {
+
+    background: white;
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+        
+}
+        
+@keyframes fadeInUp {
+            
+    from {
+                
+        opacity: 0;
+        transform: translateY(50px);
+           
+    }
+            
+    to {
+           
+        opacity: 1;
+        transform: translateY(0);
+            
+    }
+        
+}
+        
+h2 {
+            
+       font-weight: 700;
+       color: #1a73e8;
+       margin-bottom: 30px;
+       text-shadow: 1px 1px 2px #ccc;
+        
+}
+        
+.table {
+            
+       animation: slideIn 0.8s ease-in-out;
+        
+}
+        
+@keyframes slideIn {
+            
+       from {
+          
+           opacity: 0;
+           transform: translateX(-30px);
+       }
+            
+       to {
+                
+            opacity: 1;
+            transform: translateX(0);
+           
+        }
+        
+}
+        
+.btn {
+            
+       transition: all 0.3s ease;
+        
+}
+        
+.btn:hover {
+            
+       transform: scale(1.05);
+        
+}
+    
+    
+                                                             /* ADMIN DOCTOR LIST PAGE CSS END HERE */
+                                                             
+                                                             /* ADMIN VIEW PAGE CSS START HERE */
+                                                             
+                                                             
+ #welcomeMessage {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0066cc;
+            text-align: center;
+            margin-top: 30px;
+        }
+   
+.card-header{
+
+      font-size:22px;
+      font-weight:bold;
+    
+}
+
+
+
+.announcement-list {
+ 
+        padding: 0;
+        margin: 0;
+        animation: scroll-up 15s linear infinite;
+}
+
+.announcement-list li {
+ 
+        font-size: 18px;
+        margin-bottom: 20px;
+}
+
+@keyframes scroll-up {
+  
+  0% {
+  
+    transform: translateY(100%);
+ 
+  }
+  
+  100% {
+  
+    transform: translateY(-100%);
+  
+  }
+}
+
+.announcement-container {
+ 
+         position: absolute;
+         width: 100%;
+}
+
+                                                             /* ADMIN VIEW PAGE CSS END HERE */
+                                                             
+                                                             /* ADMIT INFORMATION PAGE CSS START HERE */
+                                                             
+                                                             
+   .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-box {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-circle {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .list-group-item {
+            transition: background-color 0.2s ease;
+        }
+
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .alert-danger {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(220, 53, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+
+
+                                                         /* ADMIT INFORMATION PAGE CSS END HERE */
+                                                         
+                                                         /* ANNOUNCEMENT PAGE CSS START HERE */
+                                                         
+                                                         
+    .announcement-card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5); /* 🔵 Blue shadow */
+      transition: 0.3s ease-in-out;
+    }
+
+    .announcement-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 123, 255, 0.7);
+    }
+
+    .announcement-icon {
+      font-size: 24px;
+      color: #007bff;
+      margin-right: 15px;
+      margin-top: 5px;
+    }
+
+    .announcement-content {
+      flex: 1;
+    }
+
+    .announcement-date {
+      font-weight: bold;
+      color: #28a745;
+      font-size: 16px;
+    }
+
+    .new-badge {
+      font-size: 14px;
+      color: white;
+      background-color: red;
+      padding: 3px 7px;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+    
+                                                     /* ANNOUNCEMENT PAGE CSS END HERE */
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
+    /* HOSPITAL MACHINE IMAGE SECTION CSS START HERE */
+    
+.custom-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 174, 255, 0.2);
+  margin: 15px; 
+  margin-bottom:0px !important;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 174, 255, 0.4), 0 4px 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Image Animation */
+.image-box {
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  padding: 15px; /* image के चारों तरफ space */
+}
+
+.image-box img {
+  width: 80%; /* image size कम की */
+  height: 80%; /* image size कम की */
+  object-fit: cover;
+  transition: transform 1s ease-in-out, border-radius 1s ease-in-out;
+  margin: 0 auto; /* center align */
+  display: block;
+}
+
+.image-box:hover img {
+  border-radius: 50% !important; 
+  width: 70%; 
+  height: 70%; 
+
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #044f66;
+  text-shadow: 1px 1px 1px #a8dfff;
+  margin-top: 10px;
+  padding-bottom:0px !important;
+}
+    /* HOSPITAL MACHINE IMAGE SECTION CSS END HERE */
+    
